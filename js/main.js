@@ -1,12 +1,10 @@
-import barba from '@barba/core';
-
-function leaveTran(e) {
+function titleLeave(e) {
    return new Promise(resolve => {
     TweenMax.fromTo(e, 2, { opacity: 1 }, { opacity: 0, onComplete: resolve });
   });
 }
 
-function enterTran(e) {
+function titleEnter(e) {
   return new Promise(resolve => {
     TweenMax.fromTo(e, 2, { opacity: 0 }, { opacity: 1, onComplete: resolve });
   });
@@ -16,9 +14,9 @@ barba.init({
   transitions: [{
     sync: true,
     from: { namespace: 'home' },
-    to: { namespace: 'about' },
-    leave: (data) => leaveTran(data.current.querySelector('[data-title]'),
+    to: { namespace: 'project' },
+    leave: (data) => titleLeave(data.current.querySelector('[data-title]'),
     // Same as above but we get destructured `next` directly from `data`
-    enter: ({ next }) => enterTran(next.querySelector('[data-title]'), 
+    enter: ({ next }) => titleEnter(next.querySelector('[data-title]'), 
   }],
 });
