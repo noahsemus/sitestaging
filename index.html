@@ -32,9 +32,18 @@
     </nav>
     
     <div id="bgContain">
-        <div class="globalContainer" id="leftBG"></div>
+        <div class="globalContainer" id="leftBG">
+            <div class="title">
+                        <h1 id="thingTitle">Things</h1>
+                        <img id="face04" class="face" src="img/face/face04.png">
+                    </div>
+            </div>
         <div class="globalContainer" id="rightBG"></div>
     </div>
+    
+    
+    
+    
     
     <main data-barba="container" data-barba-namespace="home">
         
@@ -42,9 +51,16 @@
         <div id="pageContain">
             
             <div class='globalContainer' id="leftPage">
-                <div class="title">
-                    <h1>Things</h1>
-                    <img id="face04" class="face" src="img/face/face04.png">
+                <div id="projectContainer">
+                    <a href="somewhere" class="project" id="pr01"></a>
+                    <a href="somewhere" class="project" id="pr02"></a>
+                    <a href="somewhere" class="project" id="pr03"></a>
+                    <a href="somewhere" class="project" id="pr04"></a>
+                    <a href="somewhere" class="project" id="pr05"></a>
+                    <a href="somewhere" class="project" id="pr06"></a>
+                    <a href="somewhere" class="project" id="pr07"></a>
+                    <a href="somewhere" class="project" id="pr08"></a>
+                    <a href="somewhere" class="project" id="pr09"></a>
                 </div>
             </div>
 
@@ -89,6 +105,84 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+    
+    
+  <script>
+        $(document).ready(function(){
+            
+	        $( "#pr01" ).hover(function() {
+                $( "#thingTitle" ).html('GMessage');
+                $('#rightBG').css('background', 'cyan')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr02" ).hover(function() {
+                $( "#thingTitle" ).html('EFE');
+                $('#rightBG').css('background', 'orange')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr03" ).hover(function() {
+                $( "#thingTitle" ).html('Prattler');
+                $('#rightBG').css('background', 'blue')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr04" ).hover(function() {
+                $( "#thingTitle" ).html('Web Projects');
+                $('#rightBG').css('background', 'springgreen')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr05" ).hover(function() {
+                $( "#thingTitle" ).html('Print');
+                $('#rightBG').css('background', 'fuchsia')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr06" ).hover(function() {
+                $( "#thingTitle" ).html('Columbia');
+                $('#rightBG').css('background', 'red')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr07" ).hover(function() {
+                $( "#thingTitle" ).html('Renaissance');
+                $('#rightBG').css('background', 'antiquewhite')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr08" ).hover(function() {
+                $( "#thingTitle" ).html('Poster Series');
+                $('#rightBG').css('background', 'aquamarine')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+            
+            $( "#pr09" ).hover(function() {
+                $( "#thingTitle" ).html('Crane Selects');
+                $('#rightBG').css('background', 'sandybrown')}, function(){
+                    $( "#thingTitle" ).html('Things');
+                    $('#rightBG').css('background', 'white');
+                }
+            );
+        });
+    </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

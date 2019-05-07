@@ -172,6 +172,10 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: line-through;
+}
+
 #bgContain {
     display: flex;
     flex-direction: row;
@@ -184,6 +188,11 @@ nav a {
 
 #leftBG {
     background: black;
+    color: white;
+}
+
+#rightBG {
+    background: white;
 }
 
 #pageContain {
@@ -204,10 +213,11 @@ nav a {
 #leftPage {
     background: none;
     color: white;
+    overflow: scroll;
 }
 
 #rightPage {
-    background: white;
+    background: none;
 }
 
 .title {
@@ -238,6 +248,13 @@ nav a {
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: black;
+    color: white;
 }
 
 #fontSuck {
@@ -246,7 +263,63 @@ nav a {
     bottom: 20px;
 }
 
+#projectContainer {
+    height: 75vh;
+    position: absolute;
+    top: 21vh;
+    display: flex;
+    padding-right: 5vw;
+}
 
+.project {
+    display: block;
+    background: red;
+    height: 100%;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project:hover {
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+
+#pr01 {
+    background-image: url(../img/projectImages/pr01/mockUps/mdpi/messMock01.jpg);
+}
+
+#pr02 {
+    background-image: url(../img/projectImages/pr02/coolImg.jpg);
+}
+
+#pr03 {
+    background-image: url(../img/projectImages/pr03/neatImg.jpg);
+}
+
+#pr04 {
+    background-image: url(../img/projectImages/pr04/zorp.png);
+}
+
+#pr05 {
+    background-image: url(../img/projectImages/pr05/bookPic08.jpg);
+}
+
+#pr06 {
+    background-image: url(../img/projectImages/pr06/prettyImg.jpg);
+}
+
+#pr07 {
+    background-image: url(../img/projectImages/pr07/feed.png);
+}
+
+#pr08 {
+    background-image: url(../img/projectImages/pr08/posterSeries.jpg);
+}
+
+#pr09 {
+    background-image: url(../img/projectImages/pr09/fontFuck/Noah_Feed_01_Week5.png);
+}
 
 
 
