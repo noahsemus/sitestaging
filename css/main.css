@@ -117,6 +117,173 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: acumin-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 12vh;
+    line-height: 12.5vh;
+    margin: 0;
+    letter-spacing: -.7vh;
+}
+
+nav {
+    position: fixed;
+    transform: rotate(90deg);
+    right: -80px;
+    top: 135px;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99999999999999;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#bgContain {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99999999999;
+}
+
+#leftBG {
+    background: black;
+}
+
+#pageContain {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.globalContainer {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+    padding-top: 5vh;
+    padding-left: 2%;
+    box-sizing: border-box;
+}
+
+#leftPage {
+    background: none;
+    color: white;
+}
+
+#rightPage {
+    background: white;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.face {
+    height: 3.5vh;
+    margin-bottom: 1.5vh;
+    margin-left: .5vh;
+}
+
+#face02 {
+    margin-left: -12vh;
+}
+
+.button {
+    width: 160px;
+    height: 55px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+#fontSuck {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* ==========================================================================
    Helper classes
    ========================================================================== */

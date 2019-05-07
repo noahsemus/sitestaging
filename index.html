@@ -13,18 +13,78 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/bbb6qdl.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body data-barba="wrapper">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+    <nav>
+        <a href='somewhere'>projects</a>
+        <a href='somewhere'>about</a>
+        <a href='somewhere'>writing</a>
+        <a href='somewhere'>film</a>
+    </nav>
+    
+    <div id="bgContain">
+        <div class="globalContainer" id="leftBG"></div>
+        <div class="globalContainer" id="rightBG"></div>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="home">
+        
+        
+        <div id="pageContain">
+            
+            <div class='globalContainer' id="leftPage">
+                <div class="title">
+                    <h1>Things</h1>
+                    <img id="face04" class="face" src="img/face/face04.png">
+                </div>
+            </div>
+
+            <div class='globalContainer' id="rightPage">
+                <div class="title">
+                    <h1>Noah <br>Semus<br> is a <br>designer<br> who <br> designs<br> things</h1>
+                    <img id="face02" class="face" src="img/face/face02.png">
+                </div>
+                
+                <a class='button' id="fontSuck" href="somewhere">
+                    This font sucks.
+                </a>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
