@@ -141,6 +141,8 @@ body {
     font-weight: 700;
     font-style: normal;
     box-sizing: border-box;
+    color: black;
+    background: white;
 }
 
 h1 {
@@ -192,7 +194,7 @@ nav a:hover {
 }
 
 #rightBG {
-    background: white;
+    background: none;
 }
 
 #pageContain {
