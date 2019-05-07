@@ -25,17 +25,17 @@
 
   <!-- Add your site or application content here -->
     <nav>
-        <a href='index.html'>projects</a>
-        <a href='somewhere'>about</a>
-        <a href='somewhere'>writing</a>
-        <a href='somewhere'>film</a>
+        <a href='../index.html'>projects</a>
+        <a href='/somewhere'>about</a>
+        <a href='/somewhere'>writing</a>
+        <a href='/somewhere'>film</a>
     </nav>
     
     <div id="bgContain">
         <div class="globalContainer" id="leftBG">
             <div class="title">
                 <h1 id="thingTitle">Things</h1>
-                <img id="face04" class="face" src="img/face/face04.png">
+                <img id="face04" class="face" src="../img/face/face04.png">
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
             <div class='globalContainer' id="rightPage">
                 <div class="title">
                     <h1>Noah <br>Semus<br> is a <br>designer<br> who <br> designs<br> things</h1>
-                    <img id="face02" class="face" src="img/face/face02.png">
+                    <img id="face02" class="face" src="../img/face/face02.png">
                 </div>
                 
                 <a class='button' id="fontSuck" href="somewhere">
@@ -97,19 +97,21 @@
     
     
     
-    
+  
+  <script src="https://unpkg.com/@barba/core"></script> 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/jquery.mousewheel.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-  <script src="https://unpkg.com/@barba/core"></script>
     
     
   <script>
         $(document).ready(function(){
+            
+            $( "#thingTitle" ).html('Things');
             
 	        $( "#pr01" ).hover(function() {
                 $( "#thingTitle" ).html('GMessage');
