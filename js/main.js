@@ -1,6 +1,6 @@
 function titleLeave() {
    return new Promise(resolve => {
-    TweenMax.to('#rightPage', 2, { opacity: 0, onComplete: resolve });
+    TweenMax.to('.navLink', 2, { css:{color:"#FFFFFF"}, onComplete: resolve });
   });
 }
 
@@ -14,9 +14,10 @@ barba.init({
   transitions: [{
     sync: true,
     from: { namespace: 'home' },
-    to: { namespace: 'about' },
+    to: { namespace: 'project' },
     leave: (data) => titleLeave(data.current.querySelector('[data-title]')),
     // Same as above but we get destructured `next` directly from `data`
+      
     enter: ({ next }) => titleEnter(next.querySelector('[data-title]')), 
   }],
 });
