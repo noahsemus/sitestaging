@@ -229,6 +229,7 @@ nav a:hover {
     flex-direction: row;
     align-items: flex-end;
     flex-wrap: nowrap;
+    position: relative;
 }
 
 .face {
@@ -328,10 +329,59 @@ nav a:hover {
 #projectPageContain {
     width: 100vw;
     background: black;
+    color: white;
 }
 
 #projectPageTitle {
     color: white;
+    z-index: 1;
+    position: fixed;
+}
+
+#projectBigTitle {
+    text-shadow: 0 0 50px #000000;
+}
+
+#projectContentContain {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 20px;
+    margin-top: 105px;
+    padding-right: 55px;
+}
+
+#projectText {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.58px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+#projectImages {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: -105px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projectIMG {
+    max-width: 100%;
+    max-height: 50vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 10px #000000;
+    z-index: 2;
 }
 
 

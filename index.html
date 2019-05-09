@@ -25,7 +25,7 @@
 
   <!-- Add your site or application content here -->
     <nav>
-        <a href='../index.html' class="navLink">projects</a>
+        <a href='../index.html' class="navLink">things</a>
         <a href='/somewhere' class="navLink">about</a>
         <a href='/somewhere' class="navLink">writing</a>
         <a href='/somewhere' class="navLink">film</a>
@@ -34,7 +34,7 @@
     <div id="bgContain">
         <div class="globalContainer" id="leftBG">
             <div class="title">
-                <h1 id="thingTitle">Things</h1>
+                <h1 class="thingTitle">Things</h1>
                 <img id="face04" class="face" src="./img/face/face04.png">
             </div>
         </div>
@@ -64,11 +64,11 @@
             </div>
 
             <div class='globalContainer' id="rightPage">
-                <div class="title">
+                <div class="title" id="bigName">
                     <h1>Noah <br>Semus<br> is a <br>designer<br> who <br> designs<br> things</h1>
                     <img id="face02" class="face" src="../img/face/face02.png">
                 </div>
-                
+
                 <a class='button' id="fontSuck" href="somewhere">
                     This font sucks.
                 </a>
@@ -113,78 +113,85 @@
     
   <script>
         $(document).ready(function(){
+
+            $( ".thingTitle" ).html('Things');
             
-            $( "#thingTitle" ).html('Things');
+            $('#pr01').click(function() {
+                $( ".thingTitle" ).html('GMessage');
+                $( "#projectContainer" ).css('z-index', '-1');
+                $('body').css('background', 'aquamarine');
+                $(this).unbind('mouseenter mouseleave');
+            });
             
 	        $( "#pr01" ).hover(function() {
-                $( "#thingTitle" ).html('GMessage');
-                $('#rightPage').css('background', 'aquamarine')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('GMessage');
+                $('body').css('background', 'aquamarine')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr02" ).hover(function() {
-                $( "#thingTitle" ).html('EFE');
-                $('#rightPage').css('background', 'orange')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('EFE');
+                $('body').css('background', 'orange')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr03" ).hover(function() {
-                $( "#thingTitle" ).html('Prattler');
-                $('#rightPage').css('background', 'dodgerblue')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Prattler');
+                $('body').css('background', 'dodgerblue')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr04" ).hover(function() {
-                $( "#thingTitle" ).html('Fun Stuff :>)');
-                $('#rightPage').css('background', 'springgreen')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Fun Stuff :>)');
+                $('body').css('background', 'springgreen')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr05" ).hover(function() {
-                $( "#thingTitle" ).html('Print');
-                $('#rightPage').css('background', 'fuchsia')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Print');
+                $('body').css('background', 'fuchsia')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr06" ).hover(function() {
-                $( "#thingTitle" ).html('Columbia');
-                $('#rightPage').css('background', 'red')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Columbia');
+                $('body').css('background', 'red')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr07" ).hover(function() {
-                $( "#thingTitle" ).html('Renaissance');
-                $('#rightPage').css('background', 'mediumslateblue')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Renaissance');
+                $('body').css('background', 'mediumslateblue')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr08" ).hover(function() {
-                $( "#thingTitle" ).html('Poster Series');
-                $('#rightPage').css('background', 'cyan')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Poster Series');
+                $('body').css('background', 'cyan')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
             $( "#pr09" ).hover(function() {
-                $( "#thingTitle" ).html('Crane Selects');
-                $('#rightPage').css('background', 'sandybrown')}, function(){
-                    $( "#thingTitle" ).html('Things');
-                    $('#rightPage').css('background', 'none');
+                $( ".thingTitle" ).html('Crane Selects');
+                $('body').css('background', 'sandybrown')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
                 }
             );
             
