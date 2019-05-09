@@ -6,7 +6,7 @@ function titleLeave() {
 
 function titleEnter() {
   return new Promise(resolve => {
-    TweenMax.to('#projectPageContain', 2, { opacity: 1, onComplete: resolve });
+    TweenMax.to('#pageContain', 2, { opacity: 1, onComplete: resolve });
   });
 }
 
@@ -15,10 +15,10 @@ barba.init({
     sync: true,
     from: { namespace: 'home' },
     to: { namespace: 'project' },
-    leave: (data) => titleLeave(data.current.querySelector('[data-title]')),
+    leave: (data) => titleLeave,
     // Same as above but we get destructured `next` directly from `data`
       
-    enter: ({ next }) => titleEnter(next.querySelector('[data-title]')), 
+    enter: ({ next }) => titleEnter, 
   }],
 });
 
