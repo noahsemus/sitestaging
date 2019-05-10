@@ -10,22 +10,23 @@ function titleLeave() {
 
 function titleEnter() {
   return new Promise(resolve => {
-    TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '20vh', ease: Power4.easeInOut, onComplete: resolve });
-    TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '20vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
   });
 }
 
 function prLeave() {
   return new Promise(resolve => {
-    TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '20vh', ease: Power4.easeInOut, onComplete: resolve });
-    TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '20vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
   });
 }
 
 function prEnter() {
    return new Promise(resolve => {
     TweenMax.to('.navLink', 2, { css:{color:"#000000"}});
-    TweenMax.from('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
+    TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
+    TweenMax.to('#projectContainer', 2, { marginLeft: '0px', ease: Power4.easeInOut});
     TweenMax.from('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
     TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
     TweenMax.to('#leftBG', 2, { width: '50vw', ease: Power4.easeInOut, onComplete: resolve });
@@ -44,32 +45,29 @@ barba.init({
     afterLeave(data) {
         data.current.container.style.display = 'none'
     },  
-    
-    beforEnter(next) {
-        TweenMax.set('#projectContentContain', {opacity: 0, onComplete: done });
-    },
       
     afterEnter: ({ next }) => titleEnter(), 
   },                              
                 
   { 
     name: 'projectOut',
-    sync: 'true',
+    sync: false,
     from: { namespace: 'project' },
     to: { namespace: 'home' },
     leave: ({ data }) => prLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
-        data.current.container.style.display = 'none'
+        data.current.container.style.display = 'none';
     },  
-    
-    beforEnter({next}) {
-        TweenMax.set('#pageContain', {opacity: 0, onComplete: done });
-        TweenMax.set('body', {background: '#FFFFFF', onComplete: done });
+      
+    beforeEnter(next){
+        return new Promise(resolve => {
+            TweenMax.set('#projectContainer', { marginLeft: '-2200px', onComplete: resolve });
+        });
     },
       
-    afterEnter: ({ next }) => prEnter(),
+    enter: ({ next }) => prEnter(),
   }
                
   ],
@@ -81,8 +79,7 @@ barba.hooks.after(data => {
                         
             $( ".thingTitle" ).html('Things');
                 
-            $('#pr01').click(function() {
-                $( ".thingTitle" ).html('GMessage');
+            $('.project').click(function() {
                 $( "#projectContainer" ).css('z-index', '-1');
                 $('body').css('background', 'aquamarine');
                 $(this).unbind('mouseenter mouseleave');
@@ -160,17 +157,26 @@ barba.hooks.after(data => {
                 }
             );
             
-            $(function() {
 
-               $("#leftPage").mousewheel(function(event, delta) {
+            (function() {
+                function scrollHorizontally(e) {
+                    e = window.event || e;
+                    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                    document.getElementById('leftPage').scrollLeft -= (delta*25); // Multiplied by 40
+                    e.preventDefault();
+                }
+                if (document.getElementById('leftPage').addEventListener) {
+                    // IE9, Chrome, Safari, Opera
+                    document.getElementById('leftPage').addEventListener("mousewheel", scrollHorizontally, false);
+                    // Firefox
+                    document.getElementById('leftPage').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+                } else {
+                    // IE 6/7/8
+                    document.getElementById('leftPage').attachEvent("onmousewheel", scrollHorizontally);
+                }
+            })();
 
-                  this.scrollLeft -= (delta * 3);
-
-                  event.preventDefault();
-
-               });
-
-            });
+            
             
         });
 });
