@@ -10,6 +10,7 @@ function titleLeave() {
 
 function titleEnter() {
   return new Promise(resolve => {
+    TweenMax.to('body', .5, { css:{background:"#000000"}});
     TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
     TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
   });
@@ -24,9 +25,9 @@ function prLeave() {
 
 function prEnter() {
    return new Promise(resolve => {
+    TweenMax.from('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
     TweenMax.to('.navLink', 2, { css:{color:"#000000"}});
     TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
-    TweenMax.to('#projectContainer', 2, { marginLeft: '0px', ease: Power4.easeInOut});
     TweenMax.from('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
     TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
     TweenMax.to('#leftBG', 2, { width: '50vw', ease: Power4.easeInOut, onComplete: resolve });
@@ -47,11 +48,12 @@ barba.init({
     },  
       
     afterEnter: ({ next }) => titleEnter(), 
+
   },                              
                 
   { 
     name: 'projectOut',
-    sync: false,
+    sync: true,
     from: { namespace: 'project' },
     to: { namespace: 'home' },
     leave: ({ data }) => prLeave(),
@@ -62,12 +64,10 @@ barba.init({
     },  
       
     beforeEnter(next){
-        return new Promise(resolve => {
-            TweenMax.set('#projectContainer', { marginLeft: '-2200px', onComplete: resolve });
-        });
+
     },
       
-    enter: ({ next }) => prEnter(),
+    afterEnter: ({ next }) => prEnter(),
   }
                
   ],
@@ -75,7 +75,7 @@ barba.init({
 
 barba.hooks.after(data => {
   // this hook will be called after each transitions
-            $(document).ready(function(){
+        $(document).ready(function(){
                         
             $( ".thingTitle" ).html('Things');
                 
@@ -157,24 +157,41 @@ barba.hooks.after(data => {
                 }
             );
             
+            class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
+              static pluginName = 'horizontalScroll';
 
-            (function() {
-                function scrollHorizontally(e) {
-                    e = window.event || e;
-                    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-                    document.getElementById('leftPage').scrollLeft -= (delta*25); // Multiplied by 40
-                    e.preventDefault();
+              transformDelta(delta, fromEvent) {
+                if (!/wheel/.test(fromEvent.type)) {
+                  return delta;
                 }
-                if (document.getElementById('leftPage').addEventListener) {
-                    // IE9, Chrome, Safari, Opera
-                    document.getElementById('leftPage').addEventListener("mousewheel", scrollHorizontally, false);
-                    // Firefox
-                    document.getElementById('leftPage').addEventListener("DOMMouseScroll", scrollHorizontally, false);
-                } else {
-                    // IE 6/7/8
-                    document.getElementById('leftPage').attachEvent("onmousewheel", scrollHorizontally);
-                }
-            })();
+
+                // @see: https://github.com/idiotWu/smooth-scrollbar/issues/181
+
+                const { x, y } = delta; 
+
+                return {
+                  y: 0,
+                  x: Math.abs(x) > Math.abs(y) ? x : y,
+                  // x: Math.sign(x || y) * Math.sqrt(x*x + y*y),
+                };
+              }
+            }
+
+            Scrollbar.use(HorizontalScrollPlugin /* you forgot this */);
+
+            // the following is forked from https://codepen.io/supah/pen/vvNmOr
+
+            /*--------------------
+            Wheel Option
+            -------------------*/
+            let option = {
+              x: 0,
+              speed: 1.5,
+              limit: 2,
+              time: 0.3,
+            };
+            
+            Scrollbar.initAll();
 
             
             
