@@ -49,7 +49,7 @@
         
         <div id="pageContain">
             
-            <div class='globalContainer' id="leftPage" data-scrollbar>
+            <div class='globalContainer' id="leftPage">
                 <div id="projectContainer">
                     <a href="projects/gmessage.html" class="project" id="pr01"></a>
                     <a href="projects/gmessage.html" class="project" id="pr02"></a>
@@ -114,14 +114,6 @@
     
   <script>
         $(document).ready(function(){
-
-            $( ".thingTitle" ).html('Things');
-            
-            $('.project').click(function() {
-                $( "#projectContainer" ).css('z-index', '-1');
-                $('body').css('background', 'aquamarine');
-                $(this).unbind('mouseenter mouseleave');
-            });
             
 	        $( "#pr01" ).hover(function() {
                 $( ".thingTitle" ).html('GMessage');
@@ -195,6 +187,10 @@
                 }
             );
             
+            $( ".thingTitle" ).html('Things');
+            
+            
+            
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
               static pluginName = 'horizontalScroll';
 
@@ -228,8 +224,12 @@
               limit: 2,
               time: 0.3,
             };
-            
-            Scrollbar.initAll();
+
+            Scrollbar.init(document.querySelector('#leftPage'), {
+              plugins: {
+                horizontalScroll: true,
+              },
+            });
             
         });
     </script>

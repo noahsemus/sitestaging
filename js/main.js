@@ -73,17 +73,9 @@ barba.init({
   ],
 });
 
-barba.hooks.after(data => {
+barba.hooks.leave(data => {
   // this hook will be called after each transitions
         $(document).ready(function(){
-                        
-            $( ".thingTitle" ).html('Things');
-                
-            $('.project').click(function() {
-                $( "#projectContainer" ).css('z-index', '-1');
-                $('body').css('background', 'aquamarine');
-                $(this).unbind('mouseenter mouseleave');
-            });
             
 	        $( "#pr01" ).hover(function() {
                 $( ".thingTitle" ).html('GMessage');
@@ -157,6 +149,8 @@ barba.hooks.after(data => {
                 }
             );
             
+            $( ".thingTitle" ).html('Things');
+            
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
               static pluginName = 'horizontalScroll';
 
@@ -190,9 +184,24 @@ barba.hooks.after(data => {
               limit: 2,
               time: 0.3,
             };
-            
-            Scrollbar.initAll();
 
+            Scrollbar.init(document.querySelector('#leftPage'), {
+              plugins: {
+                horizontalScroll: true,
+              },
+            });
+
+            Scrollbar.init(document.querySelector('#projectTextContain'), {
+              plugins: {
+                horizontalScroll: false,
+              },
+            });
+    
+            Scrollbar.init(document.querySelector('#projectImagesContain'), {
+              plugins: {
+                horizontalScroll: false,
+              },
+            });
             
             
         });
