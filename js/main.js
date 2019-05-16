@@ -1,4 +1,4 @@
-function titleLeave() {
+function homeLeave() {
    return new Promise(resolve => {
     TweenMax.to('.navLink', 2, { css:{color:"#FFFFFF"}});
     TweenMax.to('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
@@ -8,7 +8,7 @@ function titleLeave() {
   });
 }
 
-function titleEnter() {
+function projectEnter() {
   return new Promise(resolve => {
     TweenMax.to('body', .5, { css:{background:"#000000"}});
     TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
@@ -16,21 +16,61 @@ function titleEnter() {
   });
 }
 
-function prLeave() {
+function projectEnter02() {
+  return new Promise(resolve => {
+    TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+  });
+}
+
+function homeLeave02() {
+   return new Promise(resolve => {
+    TweenMax.to('.navLink', 2, { css:{color:"#FFFFFF"}});
+    TweenMax.to('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
+    TweenMax.to('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
+    TweenMax.to('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+    TweenMax.to('#leftBG', 2, { width: '100vw', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('.title', 2.2, { opacity: 0, ease: Power4.easeInOut, onComplete: resolve });
+  });
+}
+
+function aboutEnter() {
+  return new Promise(resolve => {
+    TweenMax.from('#aboutContent', 2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.set('.bgContain', { zIndex: -99999999999999999999999999, onComplete: resolve });
+  });
+}
+
+function aboutLeave() {
+  return new Promise(resolve => {
+    TweenMax.to('#aboutContent', 2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+  });
+}
+
+function projectLeave() {
   return new Promise(resolve => {
     TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
     TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
   });
 }
 
-function prEnter() {
+function projectLeave02() {
+  return new Promise(resolve => {
+    TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('.title', 2.2, { opacity: 0, ease: Power4.easeInOut, onComplete: resolve });
+  });
+}
+
+function homeEnter() {
    return new Promise(resolve => {
     TweenMax.from('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
     TweenMax.to('.navLink', 2, { css:{color:"#000000"}});
     TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
     TweenMax.from('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
     TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
-    TweenMax.to('#leftBG', 2, { width: '50vw', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('#leftBG', 2, { width: '50vw', paddingLeft: '2vw', ease: Power4.easeInOut, onComplete: resolve });
+    TweenMax.to('.title', 2.2, { opacity: 1, ease: Power4.easeInOut, onComplete: resolve });
   });
 }
 
@@ -40,14 +80,14 @@ barba.init({
     sync: true,
     from: { namespace: 'home' },
     to: { namespace: 'project' },
-    leave: ({ data }) => titleLeave(),
+    leave: ({ data }) => homeLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
         data.current.container.style.display = 'none'
     },  
       
-    afterEnter: ({ next }) => titleEnter(), 
+    afterEnter: ({ next }) => projectEnter(), 
 
   },                              
                 
@@ -56,7 +96,7 @@ barba.init({
     sync: true,
     from: { namespace: 'project' },
     to: { namespace: 'home' },
-    leave: ({ data }) => prLeave(),
+    leave: ({ data }) => projectLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
@@ -67,13 +107,88 @@ barba.init({
 
     },
       
-    afterEnter: ({ next }) => prEnter(),
-  }
+    afterEnter: ({ next }) => homeEnter(),
+  },
+                
+  { 
+    name: 'homeToAbout',
+    sync: true,
+    from: { namespace: 'home' },
+    to: { namespace: 'about' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },
+      
+    leave: ({ data }) => homeLeave02(),
+    // Same as above but we get destructured `next` directly from `data`
+    
+    afterLeave(data) {
+        data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
+    },  
+      
+    afterEnter: ({ next }) => aboutEnter(),
+  },
+                
+  { 
+    name: 'aboutOut',
+    sync: true,
+    from: { namespace: 'about' },
+    to: { namespace: 'home' },
+    leave: ({ data }) => aboutLeave(),
+    // Same as above but we get destructured `next` directly from `data`
+    
+    afterLeave(data) {
+        data.current.container.style.display = 'none';
+    },  
+      
+      
+    afterEnter: ({ next }) => homeEnter(),
+  },
+                
+  { 
+    name: 'projectToAbout',
+    sync: true,
+    from: { namespace: 'project' },
+    to: { namespace: 'about' },
+    leave: ({ data }) => projectLeave02(),
+    // Same as above but we get destructured `next` directly from `data`
+    
+    afterLeave(data) {
+        data.current.container.style.display = 'none';
+    },  
+      
+      
+    afterEnter: ({ next }) => aboutEnter(),
+  },
+                
+  { 
+    name: 'projectToProject',
+    sync: true,
+    from: { namespace: 'project' },
+    to: { namespace: 'project' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },
+      
+    leave: ({ data }) => projectLeave(),
+    // Same as above but we get destructured `next` directly from `data`
+    
+    afterLeave(data) {
+        data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
+    },  
+      
+      
+    afterEnter: ({ next }) => projectEnter02(),
+  },
                
   ],
 });
 
-barba.hooks.leave(data => {
+barba.hooks.before(data => {
   // this hook will be called after each transitions
         $(document).ready(function(){
             

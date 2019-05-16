@@ -185,7 +185,7 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -99999999999;
+    z-index: -2;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -410,7 +410,7 @@ nav a:hover {
     max-width: 100%;
     max-height: 500px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px 5px #000000;
+    filter: drop-shadow(0 0 6px #000000);
 }
 
 .projectDesc + .projectDesc {
@@ -435,7 +435,7 @@ nav a:hover {
     width: 90vh;
     max-width: 100%;
     border: 0;
-    min-height: 700px;
+    min-height: 60vh;
 }
 
 .imgContained {
@@ -513,8 +513,67 @@ nav a:hover {
     letter-spacing: 0;
     line-height: 1;
     text-decoration: underline;
+    text-align: left;
     
 }
+
+#aboutBGVid {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: -1;
+}
+
+#aboutContent {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding-right: 70px;
+    padding-bottom: 40px;
+}
+
+.aboutDesc {
+    color: white;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-top: 4vh;
+    height: 150px;
+}
+
+#aboutHead {
+    font-size: 11vh;
+    line-height: 1;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    opacity: .25;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
