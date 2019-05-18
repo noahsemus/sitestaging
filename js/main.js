@@ -161,12 +161,18 @@ barba.init({
     sync: true,
     from: { namespace: 'home' },
     to: { namespace: 'project' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },     
+      
     leave: ({ data }) => homeLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
-        data.current.container.style.display = 'none'
-    },  
+        data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
+    },   
       
     afterEnter: ({ next }) => projectEnter(), 
 
