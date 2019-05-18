@@ -1,0 +1,107 @@
+<!-- Doctype HTML -->
+<html>
+<head>
+    <title>whoa, neat!</title>
+    <meta name="theme-color" content="#00F">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">  
+    <script src="p5.min.js"></script>
+    <script src="/addons/p5.dom.min.js"></script>
+    <script src="/addons/p5.sound.min.js"></script>
+    <script src="sketch02.js"></script>
+</head>
+
+<body>
+    
+    <div id="contentProject">
+        
+        <div class="backButton">
+            <a href="/index.html">take me home, pretty please</a>
+        </div>
+        
+        <div class="HeadInfo2">
+            <h1>the prattler</h1>
+            <p><i>brief:</i> redesign & build pratt's student run school newspaper's, the prattler, old outdated website to be more inline with their new branding.</p>
+        </div>
+        
+        <div class="projectContent">
+            <p class="projectDesc01">this is the old prattler. not something great to look at if we're being honest. it was built on tumblr and did not show any of the visual flair a publication like the prattler should show.</p>
+            <img src="/projectImages/neat/oldPrattler.png" class="contentImg01" onclick="window.open('/projectImages/neat/oldPrattler.png', '_blank');">
+        </div>
+        
+        <div class="projectContent">
+            <img src="/projectImages/neat/prattlerLogo.png" class="contentImg02" onclick="window.open('/projectImages/neat/prattlerLogo.png', '_blank');">
+            <p class="projectDesc01">when the prattler approached me, they didn't have a lot to go on. they were still creating their brand guide, and the only visual they could give me was the new logomark.</p>
+        </div>
+        
+        <div class="projectContent">
+            <img src="/projectImages/neat/wireFrame01.png" class="contentImg04" onclick="window.open('/projectImages/neat/wireFrame01.png', '_blank');">
+            <img src="/projectImages/neat/wireFrame04.png" class="contentImg01" onclick="window.open('/projectImages/neat/wireFrame04.png', '_blank');">
+            <p class="projectDesc01">while the prattler worked on building out their brand guide, i began work on wireframing and creating user flows for the site. i simplified the navigation down to three root pages, so it would be easier for users to immediately jump into content.</p>
+            <p class="projectDesc01">it was also designed completely responsively on both a desktop and mobile fluid grid. </p>
+        </div>
+        
+        <div class="projectContentCenter">
+            <img src="/projectImages/neat/visual01.png" class="contentImg03" onclick="window.open('/projectImages/neat/visual01.png', '_blank');">
+            <p class="projectDesc02">i wanted the prattler's visual design to shine above the rest. while researching other publications' sites, i found a lot of similarity. white background, straightforward typesetting, etc. i wanted the prattler to be loud and bold.<br><br>to bring the publication into the 21st century, i designed it with interactivity in mind. the prattler interacts with students on a daily basis, therefore students should be able to "interact" with the pratter as well.</p>
+        </div>
+        
+        <div class="projectContent">
+            <img src="/projectImages/neat/visual04.png" class="contentImg02" onclick="window.open('/projectImages/neat/visual04.png', '_blank');">
+            <p class="projectDesc01">i built out the visuals for the prattler using only the logo, as the brand guide was still not finished. i took the logo's colour palette and made the site extremely bold in its colour usage to help show the voice of the pratter.</p>
+        </div>
+        
+        <div class="projectContent">
+            <p class="projectDesc01">using the depth from the prattler's logo, each article was made to jump out at the user, as if crying out to be clicked on. each interaction on the site is supposed to create user delight, and encourage them to explore the site to find more content and more interactions.</p>
+            <img src="/projectImages/neat/visual02.png" class="contentImg01" onclick="window.open('/projectImages/neat/visual02.png', '_blank');">
+        </div>
+        
+        <div class="projectContentCenter">
+            <img src="/projectImages/neat/home.png" class="contentImg03" onclick="window.open('https://prattleronline.com', '_blank');">
+            <p class="projectDesc02">deadlines were tight, so i immediately had to start building the site while still finishing the visual design. you can visit the live site <a href="https://prattleronline.com" target="_blank">here</a>.</p>
+        </div>
+        
+        <div class="projectContentGallery">
+            <img src="/projectImages/neat/archive.png" class="contentImg05" onclick="window.open('https://prattleronline.com', '_blank');">
+            <img src="/projectImages/neat/about.png" class="contentImg05" onclick="window.open('https://prattleronline.com', '_blank');">
+            <img src="/projectImages/neat/category.png" class="contentImg05" onclick="window.open('https://prattleronline.com', '_blank');">
+            <img src="/projectImages/neat/categoryDetail.png" class="contentImg05" onclick="window.open('https://prattleronline.com', '_blank');">
+            <img src="/projectImages/neat/article.png" class="contentImg05" onclick="window.open('https://prattleronline.com', '_blank');">
+        </div>
+        
+        <div class="projectContentEnd">
+            <h1><a href="/index.html">c'mon pal, let's go home.</a></h1>
+        </div>
+        
+    </div>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/Tickle/cursorTickle00.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle01.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle02.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle03.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle04.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle05.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle06.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle07.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle08.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle09.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!-- Doctype HTML -->
+<html>
+<head>
+    <title>wow, neato!</title>
+    <meta name="description" content="exciting! amazing! super cool! eh, just okay!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00F">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="main02.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://use.typekit.net/bbb6qdl.css">
+</head>
+
+<body>
+    
+    <nav>
+            <a href='index.html' id="homeLink">⧖ Home</a>
+            <div class="navLinks">
+                <a href="https://medium.com/@noahsemus" target="_blank">selected writing</a>
+                <a href="https://vimeo.com/noahsemus" target="_blank">film</a>
+                <a href="mailto:noahsemus@gmail.com?Subject=Wow%20Noah,%20awesome%20site.%20We%20want%20to%20hire%20you" target="_top">email</a>
+                <a href="https://www.instagram.com/noahsemusandstuff/" target="_blank">instagram</a>
+                <a href="siteIndex.html">site index</a>
+                <a href="colophon.html">colophon</a>
+            </div>
+        </nav>
+    
+    <div id="content">
+        
+        <div class="homeProjects">
+                    <a href="projectPages/dopeThing.html" id="img00" class="projectLink">  
+                        <p class="projectText">GMessage</p>
+                        <div class="projectColourBlock" id="blueBlock"></div>
+                    </a>
+            
+                    <a href="projectPages/coolThing.html" id="img01" class="projectLink">  
+                        <p class="projectText">Escape from Earth</p>
+                        <div class="projectColourBlock" id="orangeBlock"></div>
+                    </a>
+            
+                    <a href="projectPages/neatThing.html" id="img02" class="projectLink">
+                        <p class="projectText">The Prattler</p>
+                        <div class="projectColourBlock" id="yellowBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/niftyThing.html" id="img03" class="projectLink">
+                        <p class="projectText">Crane AI Selects</p>
+                        <div class="projectColourBlock" id="redBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/thingThing.html" id="img04" class="projectLink">
+                        <p class="projectText">Selected Print Work</p>
+                        <div class="projectColourBlock" id="pinkBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/niceThing.html" id="img05" class="projectLink">
+                        <p class="projectText">Renaissance</p>
+                        <div class="projectColourBlock" id="greenBlock"></div>
+                    </a>
+            
+                    <a href="projectPages/chillThing.html" id="img06" class="projectLink">
+                        <p class="projectText">Columbia Records</p>
+                        <div class="projectColourBlock" id="purpleBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/prettyThing.html" id="img07" class="projectLink">
+                        <p class="projectText">Interactive Poster Series</p>
+                        <div class="projectColourBlock" id="redBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/snazzyThing.html" id="img08" class="projectLink">
+                        <p class="projectText">Miscellanious Projects</p>
+                        <div class="projectColourBlock" id="blueBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/chillThing.html" id="img09" class="projectLink">
+                        <p class="projectText">tbd</p>
+                        <div class="projectColourBlock" id="purpleBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/prettyThing.html" id="img10" class="projectLink">
+                        <p class="projectText">tbd</p>
+                        <div class="projectColourBlock" id="redBlock"></div>
+                    </a>
+                    
+                    <a href="projectPages/snazzyThing.html" id="img11" class="projectLink">
+                        <p class="projectText">tbd</p>
+                        <div class="projectColourBlock" id="blueBlock"></div>
+                    </a>
+            
+                    <h2 id="projectsLabel">Projects</h2>
+            
+                </div>
+        
+        <div class="HeadInfo">
+            <h1 id="headInfoText">Noah<br>Semus is a<br>Designer</h1>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/Tickle/cursorTickle00.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle01.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle02.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle03.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle04.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle05.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle06.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle07.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle08.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle09.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div#makeMeScrollable").smoothDivScroll({
+
+              // always, onStart or empty (no auto scrolling) String
+              autoScrollingMode: "always", 
+                
+              autoScrollingInterval: 3,    
+                
+              mousewheelScrolling: "allDirections",   
+                
+              mousewheelScrollingStep: 1,
+                
+              easingAfterMouseWheelScrolling: true,
+                
+              easingAfterMouseWheelScrollingDuration: 600,
+                
+             // touchScrolling: true,
+                
+              hotSpotScrolling: false,
+                
+            });
+            
+        });
+        
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('.homeProjects').on('mouseleave', ()=> {
+                $( "#headInfoText" ).html('Noah<br>Semus is a<br>Designer');
+                $('body').css('background', 'black');
+            });
+	        $( "#img00" ).hover(function() {
+                $( "#headInfoText" ).html('GMessage');
+                $('body').css('background', 'blue');
+            });
+            $( "#img01" ).hover(function() {
+                $( "#headInfoText" ).html('Escape<br>From Earth');
+                $('body').css('background', 'orange');
+            });
+            $( "#img02" ).hover(function() {
+                $( "#headInfoText" ).html('The Prattler');
+                $('body').css('background', '#28A1F6');
+            });
+            $( "#img03" ).hover(function() {
+                $( "#headInfoText" ).html('Crane AI');
+                $('body').css('background', '#4DE11C');
+            });
+            $( "#img04" ).hover(function() {
+                $( "#headInfoText" ).html('Print Design');
+                $('body').css('background', '#24B5A9');
+            });
+            $( "#img05" ).hover(function() {
+                $( "#headInfoText" ).html('Renaissance');
+                $('body').css('background', '#6129FE');
+            });
+            $( "#img06" ).hover(function() {
+                $( "#headInfoText" ).html('Columbia Records');
+                $('body').css('background', 'red');
+            });
+            $( "#img07" ).hover(function() {
+                $( "#headInfoText" ).html('Poster Series');
+                $('body').css('background', '#73CC76');
+            });
+            $( "#img08" ).hover(function() {
+                $( "#headInfoText" ).html('Miscellanious');
+                $('body').css('background', '#E11C8A');
+            });
+            $( "#img09" ).hover(function() {
+                $( "#headInfoText" ).html('tbd');
+            });
+            $( "#img10" ).hover(function() {
+                $( "#headInfoText" ).html('tbd');
+            });
+            $( "#img11" ).hover(function() {
+                $( "#headInfoText" ).html('tbd');
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

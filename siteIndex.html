@@ -1,0 +1,66 @@
+<!-- Doctype HTML -->
+<html>
+<head>
+    <title>heyo, it's an index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00F">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">  
+    <script src="p5.min.js"></script>
+    <script src="/addons/p5.dom.min.js"></script>
+    <script src="/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+    
+    <div id="content">
+        
+        <div class="HeadInfo">
+            <h1>site index</h1>
+            <p>design is about reduction, and as i learn more about design, i seem to be reducing it more and more. such is life.<br><br>there have been 4 (technically 5 if you include my first adobe portfolio site) iterations of this site so far. unfortunately, the first iteration no longer exists on the web, however the other two are still around, so feel free to have a poke around.</p>
+        </div>
+        
+        <h1><a>iteration 1</a></h1>
+        <img src="siteIndex/site01.jpg" class="contentImg02" onclick="window.open('siteIndex/site01.jpg', '_blank');">
+        
+        <h1><a href="https://noahsemus.webflow.io/old-site/old-home" target="_blank">iteration 2</a></h1>
+        <img src="siteIndex/site02.jpg" class="contentImg02" onclick="window.open('https://noahsemus.webflow.io/old-site/old-home', '_blank');">
+        
+        <h1><a href="https://noahsemus.webflow.io/" target="_blank">iteration 3</a></h1>
+        <img src="siteIndex/site03.jpg" class="contentImg02" onclick="window.open('https://noahsemus.webflow.io/', '_blank');">
+        
+        <div class="projectContentEnd">
+            <h1><a href="/index.html">hey, those were groovy. i'm gonna go look at more groovy stuff by going home.</a></h1>
+        </div>
+        
+    </div>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/Tickle/cursorTickle00.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle01.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle02.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle03.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle04.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle05.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle06.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle07.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle08.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle09.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!-- Doctype HTML -->
+<html>
+<head>
+    <title>who the heck reads a colophon?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00F">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">  
+    <script src="p5.min.js"></script>
+    <script src="/addons/p5.dom.min.js"></script>
+    <script src="/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+    
+    <div id="content">
+        
+        <div class="HeadInfo">
+            <h1>colophon</h1>
+            <p>this site was built by me (noah). i try to rebuild/redesign my site every semester to keep me fresh and try out as many design styles as possible. this particular site is designed in the contemporary post-modern retro brutalist style. fun fact: it's all open source! check out the source code <a href="https://github.com/noahsemus/noahsemus.github.io" target="_blank">here</a>.</p>
+        </div>
+        
+        <div class="projectContentEnd">
+            <h1><a href="/index.html">cool. uh, i'm going to go look at some of your work now.</a></h1>
+        </div>
+        
+    </div>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/Tickle/cursorTickle00.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle01.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle02.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle03.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle04.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle05.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle06.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle07.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle08.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle09.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    </script>
+    
+</body>
+
+</html>

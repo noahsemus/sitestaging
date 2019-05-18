@@ -1,0 +1,108 @@
+<!-- Doctype HTML -->
+<html>
+<head>
+    <title>so many things!</title>
+    <meta name="theme-color" content="#00F">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">  
+    <script src="p5.min.js"></script>
+    <script src="/addons/p5.dom.min.js"></script>
+    <script src="/addons/p5.sound.min.js"></script>
+    <script src="sketch02.js"></script>
+</head>
+
+<body>
+    
+    <div id="contentProject">
+        
+        <div class="backButton">
+            <a href="/index.html">take me home, pretty please</a>
+        </div>
+        
+        <div class="HeadInfo2">
+            <h1>review</h1>
+            <p>review is a book (and accompanying video piece) about subtext. how does one bring what is unimportant to the forefront of thought? what is important anyway? how do we assign value to things?<br><br>the book was assembled and typeset by myself. physical book can be viewed upon request.</p>
+        </div>
+        
+        <div class="projectContentFrame">
+            <iframe src="//e.issuu.com/embed.html#37055882/67833013" allowfullscreen></iframe>
+        </div>
+
+        <img src="/projectImages/thing/bookPic01.jpg" class="contentImg02" onclick="window.open('/projectImages/thing/bookPic01.jpg', '_blank');">
+        
+        <img src="/projectImages/thing/bookPic02.jpg" class="contentImg02" onclick="window.open('/projectImages/thing/bookPic02.jpg', '_blank');">
+        
+        <img src="/projectImages/thing/bookPic03.jpg" class="contentImg02" onclick="window.open('/projectImages/thing/bookPic03.jpg', '_blank');">
+        
+        <img src="/projectImages/thing/bookPic07.jpg" class="contentImg02" onclick="window.open('/projectImages/thing/bookPic07.jpg', '_blank');">
+        
+        <div class="projectContentFrame">
+            <iframe src="https://player.vimeo.com/video/317693937" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        
+        <p class="projectDescDivider">//////////////////////////////////////</p>
+        
+        <div class="HeadInfo2">
+            <h1>comd 15</h1>
+            <p><i>brief:</i> study and research pratt's "comd 15" typefaces. after our research, we were assigned a typeface to write an essay on and design a zine around.</p>
+        </div>
+        
+        <div class="projectContentFrame">
+            <iframe src="//e.issuu.com/embed.html#37055882/67832626" allowfullscreen></iframe>
+        </div>
+        
+        <p class="projectDesc03">initial research on pratt's comd 15 typefaces.</p>
+        
+        <div class="projectContentFrame">
+            <iframe src="//e.issuu.com/embed.html#37055882/67832440" allowfullscreen></iframe>
+        </div>
+        
+        <p class="projectDesc03">zine and essay specifically on garamond.</p>
+        
+        <p class="projectDescDivider">//////////////////////////////////////</p>
+        
+        <div class="HeadInfo2">
+            <h1>mute</h1>
+            <p>a collection of my photography over the course of my first sophomore semester.</p>
+        </div>
+        
+        <div class="projectContentFrame">
+            <iframe src="//e.issuu.com/embed.html#37055882/67833358" allowfullscreen></iframe>
+        </div>
+        
+        <div class="projectContentEnd">
+            <h1><a href="/index.html">oh gee, it's time to go home.</a></h1>
+        </div>
+        
+    </div>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/Tickle/cursorTickle00.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle01.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle02.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle03.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle04.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle05.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle06.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle07.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle08.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle09.png"), auto',
+                           'url("/Cursor/Tickle/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    </script>
+    
+</body>
+
+</html>

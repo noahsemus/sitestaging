@@ -1,0 +1,607 @@
+canvas {
+    position: fixed; top: 0; left: 0; z-index: 1; 
+} 
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 500px;
+    border: none;
+}
+
+#content {
+    position: relative; 
+    z-index: 2; 
+    min-height: 90vh;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background: blue;
+}
+
+button {
+    cursor: url(Cursor/Link/cursorLink00.png), auto;
+    z-index: 999999999;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    cursor: url(Cursor/Link/cursorLink00.png), auto;
+}
+
+h1 a:link {
+    color: white;
+    z-index: 5;
+}
+
+h1 a:visited {
+    color: white;
+}
+
+h1 a:hover + .meImg {
+    display: block;
+}
+
+p {
+    font-size: 14px;
+}
+
+.meImg{
+    display: none;
+    position: fixed;
+    top: 5vh;
+    right: 20;
+    z-index: -1;
+}
+
+.meUhImg {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.HeadInfo {
+    max-width: 510px;
+    margin-bottom: 5vh;
+}
+
+.HomeLinks a:link {
+    display: inline-block;
+    color: white;
+    width: auto;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.HomeLinks a:visited {
+    color: white;
+}
+
+.HomeLinks a:hover {
+    color: yellow;
+}
+
+a.coolLink:hover .coolImg {
+    display: block;
+}
+
+.coolImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 15vh;
+    right: 10vw;
+}
+
+a.neatLink:hover .neatImg {
+    display: block;
+}
+
+.neatImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 20vh;
+    right: 10vw;
+}
+
+.niftyImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 25vh;
+    right: 10vw;
+}
+
+a.niftyLink:hover .niftyImg {
+    display: block;
+}
+
+a.thingLink:hover .thingImg {
+    display: block;
+}
+
+.thingImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 30vh;
+    right: 10vw;
+}
+
+a.niceLink:hover .niceImg {
+    display: block;
+}
+
+.niceImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 35vh;
+    right: 10vw;
+}
+
+a.prettyLink:hover .prettyImg {
+    display: block;
+}
+
+.prettyImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 40vh;
+    right: 10vw;
+}
+
+a.snazzyLink:hover .snazzyImg {
+    display: block;
+}
+
+.snazzyImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 45vh;
+    right: 10vw;
+}
+
+a.chillLink:hover .chillImg {
+    display: block;
+}
+
+.chillImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 50vh;
+    right: 10vw;
+}
+
+.linkImg {
+    display: block;
+    max-width: 40vw;
+    max-height: 40vh;
+}
+
+.bottomSheet {
+    margin-top: 50px;
+    position: relative;
+    width: auto;
+}
+
+.bottomSheet a:link {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.bottomSheet a:visited {
+    color: white;
+}
+
+.bottomSheet a:hover {
+    color: chartreuse;
+}
+
+.scrollingImg:hover {
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform: scale(.95);
+    opacity: .8;
+}
+
+.mobileHome {
+    flex-wrap: wrap;  
+    display: none;
+}
+
+.mobileHome a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.4);
+}
+
+.mobileHome a:hover{
+    transform: scale(.95);
+    transform-origin: center;
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    opacity: .8;
+    font-style: italic;
+}
+
+#img00 {
+    background-image: url(projectImages/dope/mockUps/mdpi/heroMock02.jpg);
+}
+
+#img01 {
+    background-image: url(Images/coolImg.jpg);
+}
+
+#img02 {
+    background-image: url(Images/neatImg.jpg)
+}
+
+#img03 {
+    background-image: url(Images/niftyImg.png);
+    background-position: top;
+}
+
+#img04 {
+    background-image: url(Images/thingImg.jpg);
+    background-position: left;
+}
+
+#img05 {
+    background-image: url(Images/niceImg.jpg)
+}
+
+#img06 {
+    background-image: url(Images/prettyImg.jpg)
+}
+
+#img07 {
+    background-image: url(Images/snazzyImg.jpg)
+}
+
+#img08 {
+    background-image: url(projectImages/chill/zorp.png);
+    background-position: left;
+}
+
+
+
+
+
+/* Project page stuff */
+
+
+
+
+
+
+
+
+
+
+#contentProject {
+    position: relative; 
+    z-index: 2; 
+    min-height: 90vh;
+    max-width: 1100px;
+}
+
+.HeadInfo2 {
+    max-width: 510px;
+    margin-bottom: 50px;;
+}
+
+.backButton {
+    width: 150;
+    position: fixed;
+    top: 20px;
+    right: 5vw;
+    text-align: right;
+    font-size: 14px;
+    z-index: 99999;
+}
+
+.backButton a:link {
+    color: white;
+}
+
+.backButton a:visited {
+    color: white;
+}
+
+.projectContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectContentFrame {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.projectContentGallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+    align-items: center;
+}
+
+.projectContentEnd {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    height: auto;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
+}
+
+.projectContentCenter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 300;
+    height: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    vertical-align: middle;
+    align-content: center;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.projectDesc01 {
+    max-width: 400;
+    height: auto;
+}
+
+.projectDesc01 a:link {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.projectDesc02 {
+    display: inline-block;
+    line-height: 14px;
+    text-align: center;
+    max-width: 400px;
+    align-self: center;
+}
+
+.projectDesc02 a:link {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.projectDesc03 {
+    max-width: 400;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.projectDesc03 a:link {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.projectDescDivider {
+    width: 100%;
+    height: auto;
+    margin-top: 125px;
+    margin-bottom: 125px;;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contentImg01 {
+    width: auto;
+    height: auto;
+    max-height: 350;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    transform-origin: right;
+}
+
+.contentImg02 {
+    width: auto;
+    height: auto;
+    max-height: 350;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-right: 60;
+    margin-bottom: 20px;
+    transform-origin: left;
+}
+
+.contentImg03 {
+    width: auto;
+    height: auto;
+    max-height: 70vh;
+    max-width: 100%;
+    object-fit: contain;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
+}
+
+.contentImg04 {
+    width: auto;
+    height: auto;
+    max-height: 350;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transform-origin: left;
+}
+
+.contentImg05 {
+    width: auto;
+    height: auto;
+    max-height: 350;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
+}
+
+.contentImg06 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: none;
+}
+
+.contentImg01:hover {
+    position: relative;
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: right;
+    cursor: url(Cursor/Link/cursorLink05.png) 16 16, auto;
+}
+
+.contentImg02:hover {
+    position: relative;
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: left;
+    cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
+}
+
+.contentImg03:hover {
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: center;
+}
+
+.contentImg04:hover {
+    position: relative;
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: left;
+    cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
+    }
+
+video {
+    max-width: 100%;
+    max-height: 350px;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
+}
+
+.mobileVid{
+    width: auto;
+    min-height: 600px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.bigVid{
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+}
+
+@media (max-width: 1050px) {
+    
+    .contentImg01{
+        width: 100%;
+        height: auto;
+        max-height: 50vh;;
+    }
+    
+    .contentImg01:hover {
+        position: relative;
+        transform: scale(1);
+        transform-origin: right;
+        cursor: url(Cursor/Link/cursorLink05.png) 16 16, auto;
+    }
+    
+    .contentImg02:hover {
+        position: relative;
+        transform: scale(1);
+        transform-origin: left;
+        cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
+    }
+    
+    .contentImg04:hover {
+        position: relative;
+        transform: scale(1);
+        transform-origin: left;
+        cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
+    }
+    .mobileHome{
+        display: flex;
+    }
+    #makeMeScrollable{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .HomeLinks {
+        padding-bottom: 175px;
+    }
+}
+
+@media (max-height: 800px) {
+    .HomeLinks {
+        padding-bottom: 150px;
+    }
+}
