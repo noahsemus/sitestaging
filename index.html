@@ -27,8 +27,8 @@
     <nav>
         <a href='../index.html' class="navLink">things</a>
         <a href='/about.html' class="navLink">about</a>
-        <a href='/somewhere' class="navLink">writing</a>
-        <a href='/somewhere' class="navLink">film</a>
+        <a href='https://medium.com/@noahsemus' target="_blank" class="navLink">writing</a>
+        <a href='https://vimeo.com/noahsemus' target="_blank" class="navLink">film</a>
     </nav>
     
     <div id="bgContain">
@@ -51,15 +51,16 @@
             
             <div class='globalContainer' id="leftPage">
                 <div id="projectContainer">
+                    <a href="somewhere" class="project" id="projectEmpty"></a>
                     <a href="projects/gmessage.html" class="project" id="pr01"></a>
                     <a href="projects/efe.html" class="project" id="pr02"></a>
-                    <a href="somewhere" class="project" id="pr03"></a>
-                    <a href="somewhere" class="project" id="pr04"></a>
-                    <a href="somewhere" class="project" id="pr05"></a>
-                    <a href="somewhere" class="project" id="pr06"></a>
-                    <a href="somewhere" class="project" id="pr07"></a>
-                    <a href="somewhere" class="project" id="pr08"></a>
-                    <a href="somewhere" class="project" id="pr09"></a>
+                    <a href="projects/prattler.html" class="project" id="pr03"></a>
+                    <a href="projects/funStuff.html" class="project" id="pr04"></a>
+                    <a href="projects/print.html" class="project" id="pr05"></a>
+                    <a href="projects/columbia.html" class="project" id="pr06"></a>
+                    <a href="projects/omniscience.html" class="project" id="pr07"></a>
+                    <a href="projects/posters.html" class="project" id="pr08"></a>
+                    <a href="projects/crane.html" class="project" id="pr09"></a>
                 </div>
             </div>
 
@@ -69,7 +70,7 @@
                     <img id="face02" class="face" src="/img/face/face02.png">
                 </div>
 
-                <a class='button' id="fontSuck" href="somewhere">
+                <a class='button' id="fontSuck">
                     This font sucks.
                 </a>
             </div>
@@ -114,6 +115,20 @@
     
   <script>
         $(document).ready(function(){
+            
+            $("#fontSuck").click(function(){
+                
+                 if($('body').css('font-family') == "acumin-pro")
+                 {
+                    $('body').css('font-family','Comic Sans MS');
+                    $(this).html('Is this what you wanted?');
+                 }
+                 else
+                 {
+                    $('body').css('font-family','acumin-pro');
+                    $(this).html('This font sucks.');
+                 }
+            });
             
 	        $( "#pr01" ).hover(function() {
                 $( ".thingTitle" ).html('GMessage');
@@ -164,7 +179,7 @@
             );
             
             $( "#pr07" ).hover(function() {
-                $( ".thingTitle" ).html('Renaissance');
+                $( ".thingTitle" ).html('Omniscience');
                 $('body').css('background', 'mediumslateblue')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');

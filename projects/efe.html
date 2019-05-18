@@ -27,8 +27,8 @@
     <nav>
         <a href='/index.html' style="color: white">things</a>
         <a href='/about.html' style="color: white">about</a>
-        <a href='somewhere' style="color: white">writing</a>
-        <a href='somewhere' style="color: white">film</a>
+        <a href='https://medium.com/@noahsemus' target="_blank" class="navLink">writing</a>
+        <a href='https://vimeo.com/noahsemus' target="_blank" class="navLink">film</a>
     </nav>
     
     <div id="bgContain">
@@ -77,13 +77,13 @@
                             <video class="projectIMG" autoplay loop controls muted>
                                 <source src="/img/projectImages/pr02/NewMachine04.mp4">
                             </video>
-                            <div class="nextProject">
+                            <div class="nextProject mobileDisable">
                                 <p class="nextProjText">Live link:</p>
                                 <a href="https://noahsemus.github.io/EFE_Level_1/" target="_blank"><h1><span class="nextProHead">Play the Alpha Version of the Game!</span></h1></a>
                             </div>
-                            <div class="nextProject">
-                                <p class="nextProjText">Next Project:</p>
-                                <a href="/projects/..."><h1><span class="nextProHead">Escape from Earth</span></h1></a>
+                            <div class="nextProject mobileDisable">
+                                <p class="nextProjText">View more stuff:</p>
+                                <a href="/index.html"><h1><span class="nextProHead">Things</span></h1></a>
                             </div>
                         </div>
                     </div>
@@ -128,8 +128,8 @@
                             </div>
 
                             <div class="nextProject lastElement">
-                                    <p class="nextProjText">Next Project:</p>
-                                    <a href="/projects/gmessage.html"><h1><span class="nextProHead pNextHead">Escape from Earth</span></h1></a>
+                                    <p class="nextProjText">View more stuff:</p>
+                                    <a href="/index.html"><h1><span class="nextProHead pNextHead">Things</span></h1></a>
                             </div>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
               limit: 2,
               time: 0.3,
             };
-
+      
             Scrollbar.init(document.querySelector('#projectTextContain'), {
               plugins: {
                 horizontalScroll: false,

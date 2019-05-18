@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/bbb6qdl.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body data-barba="wrapper" style="background: black">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+    <nav>
+        <a href='/index.html' style="color: white">things</a>
+        <a href='/about.html' style="color: white">about</a>
+        <a href='https://medium.com/@noahsemus' target="_blank" class="navLink">writing</a>
+        <a href='https://vimeo.com/noahsemus' target="_blank" class="navLink">film</a>
+    </nav>
+    
+    <div id="bgContain">
+        <div class="globalContainer" id="leftBG">
+            <div class="title">
+                        <h1 class="thingTitle">Columbia</h1>
+                        <img id="face04" class="face" src="../img/face/face04.png">
+                    </div>
+            </div>
+    </div>
+    
+    
+    
+    
+    
+    <main data-barba="container" data-barba-namespace="project">
+        
+        
+        <div id="pageContain">
+            
+            <div class='globalContainer' id="projectPageContain">
+                <div class="title" id="projectPageTitle">
+                    <h1 id="projectBigTitle">Columbia</h1>
+                    <img id="face04" class="face" src="/img/face/face04.png">
+                </div>
+                
+                <div id="projectContentContain">
+                    <div id="projectImagesContain">
+                        <div id="projectImages">
+
+                            <img class="projectIMG" src="/img/projectImages/pr06/shh.jpg">
+                            
+                        </div>
+                    </div>
+
+                    <div id="projectTextContain">
+                        <div id="projectText">
+
+                            <p class="projectDesc">This is a branding and motion graphics project I did while working at Sony Music Entertainment for Columbia Records. Unfortunately, it is still under NDA. If you would like to see it, please email me at <a href='mailto:noahsemus@gmail.com'>noahsemus@gmail.com</a>.</p>
+                            
+                            <div class="nextProject lastElement">
+                                    <p class="nextProjText">View more stuff:</p>
+                                    <a href="/index.html"><h1><span class="nextProHead pNextHead">Things</span></h1></a>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>            
+        </div>
+        
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <script src="../js/jquery.mousewheel.min.js"></script>
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/@barba/router"></script>
+
+  <script src="../js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="../js/smooth-scrollbar.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+    
+    
+  <script>
+        $(document).ready(function(){
+            
+            $('.project').click(function() {
+                $( "#projectContainer" ).css('z-index', '-1');
+                $('body').css('background', 'aquamarine');
+                $(this).unbind('mouseenter mouseleave');
+            });
+            
+	        $( "#pr01" ).hover(function() {
+                $( ".thingTitle" ).html('GMessage');
+                $('body').css('background', 'aquamarine')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr02" ).hover(function() {
+                $( ".thingTitle" ).html('EFE');
+                $('body').css('background', 'orange')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr03" ).hover(function() {
+                $( ".thingTitle" ).html('Prattler');
+                $('body').css('background', 'dodgerblue')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr04" ).hover(function() {
+                $( ".thingTitle" ).html('Fun Stuff :>)');
+                $('body').css('background', 'springgreen')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr05" ).hover(function() {
+                $( ".thingTitle" ).html('Print');
+                $('body').css('background', 'fuchsia')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr06" ).hover(function() {
+                $( ".thingTitle" ).html('Columbia');
+                $('body').css('background', 'red')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr07" ).hover(function() {
+                $( ".thingTitle" ).html('Renaissance');
+                $('body').css('background', 'mediumslateblue')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr08" ).hover(function() {
+                $( ".thingTitle" ).html('Poster Series');
+                $('body').css('background', 'cyan')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr09" ).hover(function() {
+                $( ".thingTitle" ).html('Crane Selects');
+                $('body').css('background', 'sandybrown')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
+              static pluginName = 'horizontalScroll';
+
+              transformDelta(delta, fromEvent) {
+                if (!/wheel/.test(fromEvent.type)) {
+                  return delta;
+                }
+
+                // @see: https://github.com/idiotWu/smooth-scrollbar/issues/181
+
+                const { x, y } = delta; 
+
+                return {
+                  y: 0,
+                  x: Math.abs(x) > Math.abs(y) ? x : y,
+                  // x: Math.sign(x || y) * Math.sqrt(x*x + y*y),
+                };
+              }
+            }
+
+            Scrollbar.use(HorizontalScrollPlugin /* you forgot this */);
+
+            // the following is forked from https://codepen.io/supah/pen/vvNmOr
+
+            /*--------------------
+            Wheel Option
+            -------------------*/
+            let option = {
+              x: 0,
+              speed: 1.5,
+              limit: 2,
+              time: 0.3,
+            };
+
+            Scrollbar.init(document.querySelector('#projectTextContain'), {
+              plugins: {
+                horizontalScroll: false,
+              },
+            });
+    
+            Scrollbar.init(document.querySelector('#projectImagesContain'), {
+              plugins: {
+                horizontalScroll: false,
+              },
+            });
+            
+        });
+    </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
