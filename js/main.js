@@ -270,11 +270,15 @@ barba.init({
     sync: true,
     to: { namespace: 'home' },
       
-    beforeLeave(data) {
-       // data.next.container.style.display = 'none';
+    beforeAppear(data) {
+        data.current.container.style.display = 'none';
     },
       
-    appear: ({ data }) => homeLoad(),
+    appear(data) {
+        data.current.container.style.display = 'block';
+    },
+      
+    afterAppear: ({ data }) => homeLoad(),
     // Same as above but we get destructured `next` directly from `data`
     
 
